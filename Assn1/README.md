@@ -41,13 +41,13 @@ Customers with at least one transaction over $200(pairIf, reduce, filter, map) -
            for which the predicate function returns true  
 */   
 function filter(data, predicate){
-  let valid = [];
-  for (const i of data){
-    if(predicate = true){
-      add i to array valid
-    }
-  }
-  return valid;
+  let valid = [];  
+  for (const i of data){  
+    if(predicate = true){  
+      add i to array valid  
+    }  
+  }  
+  return valid;  
 }
 #### Example:
 const data = [1,2,3,4,5,6,7];  
@@ -61,9 +61,9 @@ console.log(result); // [2,4,6];
   @predicate: a function that takes a single datapoint as an argument. Returns either true or false.  
   @return: a single data point from data  
 */  
-function findLast(data, predicate)// use filter {
-  const valid = filter(data,predicate);
-  return last value of valid;
+function findLast(data, predicate)// use filter {  
+  const valid = filter(data,predicate);  
+  return last value of valid;  
 } 
 #### Example:
 const data = [1,2,3,4,5,6,7];  
@@ -77,12 +77,12 @@ console.log(result); // 6
   @callback: a function that takes a single datapoint as an argument. Returns a new value based on the input value  
   @return: an array
 */  
-function map(data, callback){
-  const newData = [];
-  for(const i of data){
-    add callback(i) to newData
-  }
-  return newData;
+function map(data, callback){  
+  const newData = [];  
+  for(const i of data){  
+    add callback(i) to newData  
+  }  
+  return newData;  
 }  
 #### Example:
 const data = [1,2,3,4,5,6,7];  
@@ -100,17 +100,17 @@ console.log(strings); // ["1","2","3","4","5","6","7"];
   @predicate: a function that takes a single datapoint from each input array as an argument. Returns true or false  
   @return: a single data point from data  
 */  
-function pairIf(data1, data2, callback){
-  let data3 = [];
-  for(const i of data1){
-    for(const j of data2){
-      if callback==true{
-        add i and j to data3;
-      }
-    }
-  }
-  return data3.length;
-}  
+function pairIf(data1, data2, callback){  
+  let data3 = [];  
+  for(const i of data1){  
+    for(const j of data2){  
+      if callback==true{  
+        add i and j to data3;  
+      }  
+    }  
+  }  
+  return data3.length;  
+}    
 #### Example:
 const labels = ["positive", "negative"];  
 const nums = [1, -3, -5, 12];  
@@ -130,14 +130,14 @@ console.log(pairs); // [["positive", 1], ["positive", 12], ["negative", -3], ["n
   @initialValue: the starting point for the reduction.  
   @return: the value from the final call to the reducer function.  
 */  
-function reduce(data, reducer, intialValue){
-  let total = initialValue;
-  for(const i of data){
-    if reducer{
-      total++;
-    }
-  }
-  return total;
+function reduce(data, reducer, intialValue){  
+  let total = initialValue;  
+  for(const i of data){  
+    if reducer{  
+      total++;  
+    }  
+  }  
+  return total;  
 }  
 #### Example:
 const nums = [1,2,3,4,5];  
@@ -156,16 +156,16 @@ const evensAndOdds = reduce(nums, (value, acc) => {
 console.log(evensAndOdds); //{evens: [2,4], odds: [1,3,5]};  
 
 ### Complete Output:
-Number of invalid transactions: 43 //console.log(filter(transactions, (transaction) => transaction.amount === null || transaction.amount < 0 || (transaction.product!==FIG_JAM, FIG_JELLY, SPICY_FIG_JAM, or ORANGE_FIG_JELLY. ")).length) 
-Number of duplicate customers: 28  //console.log(pairIf(Customers, Customers2, (customer1, customer2) => customer1.emailAddress===customer2.emailAddress))
-Most recent transaction over $200: $232.53 //console.log(findLast(Transactions, transaction => transaction.amount>200))  
-Number of small transactions: 2432 //console.log(reduce(Transactions,(transaction, total) => transaction.amount<25))  
-Number of medium transaction: 234 // console.log(reduce(Transactions,(transaction, total)=> transaction.amount>25 and transaction.amount< 75))
-Number of large transactions: 43 //console.log(reduce(Transactions,(transaction, total) => transaction.amount>==75))
-Customers with transactions over $200: // first get all customerIDs with over 200: filter(transactions, (transaction) => transaction.amount>200));
-                                       // pair each customer with transaction using ID: pairIf(filtered transactions, Customers, (transaction, Customer) => transaction.id ===        
-                                       // Customer.customerid)
-                                       // reduce all duplicate customers: reduce(??)
+Number of invalid transactions: 43 //console.log(filter(transactions, (transaction) => transaction.amount === null || transaction.amount < 0 || (transaction.product!==FIG_JAM, FIG_JELLY, SPICY_FIG_JAM, or ORANGE_FIG_JELLY. ")).length)   
+Number of duplicate customers: 28  //console.log(pairIf(Customers, Customers2, (customer1, customer2) => customer1.emailAddress===customer2.emailAddress))  
+Most recent transaction over $200: $232.53 //console.log(findLast(Transactions, transaction => transaction.amount>200))   
+Number of small transactions: 2432 //console.log(reduce(Transactions,(transaction, total) => transaction.amount<25))    
+Number of medium transaction: 234 // console.log(reduce(Transactions,(transaction, total)=> transaction.amount>25 and transaction.amount< 75))  
+Number of large transactions: 43 //console.log(reduce(Transactions,(transaction, total) => transaction.amount>==75))  
+Customers with transactions over $200: // first get all customerIDs with over 200: filter(transactions, (transaction) => transaction.amount>200));  
+                                       // pair each customer with transaction using ID: pairIf(filtered transactions, Customers, (transaction, Customer) => transaction.id ===          
+                                       // Customer.customerid)  
+                                       // reduce all duplicate customers: reduce(??)   
 [...]  
 Names of customers with transactions over $200" // map over reduced customers to get customer names  
 [...]   

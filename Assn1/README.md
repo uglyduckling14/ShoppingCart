@@ -156,7 +156,7 @@ const evensAndOdds = reduce(nums, (value, acc) => {
 console.log(evensAndOdds); //{evens: [2,4], odds: [1,3,5]};  
 
 ### Complete Output:
-Number of invalid transactions: 43 //console.log(filter(transactions, (transaction) => transaction.amount === null || transaction.amount < 0 || (transaction.product!==FIG_JAM, FIG_JELLY, SPICY_FIG_JAM, or ORANGE_FIG_JELLY. ")).length)   
+Number of invalid transactions: 43 //console.log(filter(transactions, (transaction) => amount in tr || transaction.amount < 0 || (transaction.product!=="FIG_JAM", FIG_JELLY, SPICY_FIG_JAM, or ORANGE_FIG_JELLY. ")).length)   
 Number of duplicate customers: 28  //console.log(pairIf(Customers, Customers2, (customer1, customer2) => customer1.emailAddress===customer2.emailAddress))  
 Most recent transaction over $200: $232.53 //console.log(findLast(Transactions, transaction => transaction.amount>200))   
 Number of small transactions: 2432 //console.log(reduce(Transactions,(transaction, total) => transaction.amount<25))    
@@ -169,3 +169,4 @@ Customers with transactions over $200: // first get all customerIDs with over 20
 [...]  
 Names of customers with transactions over $200" // map over reduced customers to get customer names  
 [...]   
+customers, emptyArray. Check if customer[i] is in emptyArray. Add value to empty array regardless, if inside emptyArray add to data3

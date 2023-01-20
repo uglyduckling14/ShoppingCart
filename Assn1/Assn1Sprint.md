@@ -4,4 +4,7 @@ Sprint for Assignment 1:
 |    | started documentation             |            |
 |1/11| Finished pseudocode               |120 min     |
 |1/12| Implemented                       | 60 min     |
-|1/14| filter/pairIf sort of done???     | 120 min    |
+|1/14| filter/pairIf/findLast/reduce     |            |
+|    | sort of done???                   | 120 min    |
+|1/19| testing and finally finished      | 160 min    |
+|    | reduce and map                    |            |

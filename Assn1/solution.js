@@ -33,16 +33,15 @@ let large = reduce(transactions,(transaction,initial) => {if(transaction.amount 
 },blankLarge);
 console.log("Number of large transactions: " +large.length);
 let over200 = filter(transactions, (transaction) => transaction.amount>200 && transaction.amount != null && transaction.amount != undefined && transaction.amount>0 && (transaction.product === "FIG_JAM" || transaction.product === "FIG_JELLY" || transaction.product === "SPICY_FIG_JAM" || transaction.product === "ORANGE_FIG_JELLY"));
-// //console.log(over200);
+
 let entry = [];
 // //Get each customer name and id first! create array and pair it to the customerId
 let paired = pairIf(customers, over200, (customer, transaction)=> transaction.customerId === customer.id);
-//console.log(paired);
+
 let unique = reduce(paired, (smallerArray,uniqueArray)=>{if(!uniqueArray.includes(smallerArray[1])){
   uniqueArray.push(smallerArray[1]);
 }
 return uniqueArray;},entry)
-//console.log(unique);
 let mapped = map(unique, (customer) => customer.firstName + " "+ customer.lastName);
 console.log("Customers with transactions over $200:");
 console.log(unique);
@@ -52,7 +51,6 @@ function filter(data, predicate){
     let invalid = [];
     for(const i of data){
         if(predicate(i)){
-           // console.log(i);
             invalid.push(i);
         }
     }
@@ -66,7 +64,6 @@ function map(data, callback){
     const newData = [];  
     for(const i of data){   
       newData.push(callback(i));
-      //console.log(i);
     }  
     return newData;  
 }
@@ -75,10 +72,7 @@ function pairIf(data1, data2, callback){
     for(const i of data1){  
        for(const j of data2){
             if(callback(i,j)){
-              // console.log(i);
-              // console.log(j);
               data3.push([j,i]);
-              //console.log(data3);
             }
        }
     }  
@@ -87,10 +81,8 @@ function pairIf(data1, data2, callback){
 function reduce(data, reducer, initialValue){ 
   let total=initialValue;   
   for(const i of data){
-      //console.log(total);
       total= reducer(i,initialValue);
   } 
-  //console.log(total);
   return total;
      
 }

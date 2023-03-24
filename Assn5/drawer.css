@@ -1,0 +1,7 @@
+.crumple{
+    background-color: rgb(89, 164, 207);
+    color:white;
+}
+.crumple:hover{
+    background-color: rgb(29, 35, 87);
+}

@@ -1,0 +1,25 @@
+.container{
+    display: flex;
+    padding:20px;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: rgb(255, 115, 115);
+    color:white;
+    border-radius:50px;
+}
+.title{
+    list-style-type:none;
+    font-weight: bolder;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    column-gap:30px;
+    list-style-type:none;
+}
+.objects{
+    display:flex;
+    flex-direction: column;
+    row-gap:50px;
+}
